@@ -37,7 +37,7 @@ import kotlin.math.log
  * ViewModel for managing restaurant data, search functionality, location updates, and playlists.
  */
 class RestaurantsViewModel(application: Application) : AndroidViewModel(application) {
-    private val mapsApiKey = remoteConfig.getString("google_maps_key")
+    private val mapsApiKey = "AIzaSyBeXBdAkyXHFGhX8p-SVQzNRz8YRrYb7Jg"
 
     // Initialize Places API
     init {
@@ -362,14 +362,27 @@ class RestaurantsViewModel(application: Application) : AndroidViewModel(applicat
     /**
      * Parses a location string into a LatLng object.
      */
+//    private fun parseLocationString(locationStr: String): LatLng? {
+//        return try {
+//            val (lat, lng) = locationStr.split(",").map { it.trim().toDouble() }
+//            LatLng(lat, lng)
+//        } catch (e: Exception) {
+//            Log.e("RestaurantsViewModel", "Error parsing location string: ${e.message}")
+//            null
+//        }
+//    }
+
     private fun parseLocationString(locationStr: String): LatLng? {
-        return try {
-            val (lat, lng) = locationStr.split(",").map { it.trim().toDouble() }
-            LatLng(lat, lng)
-        } catch (e: Exception) {
-            Log.e("RestaurantsViewModel", "Error parsing location string: ${e.message}")
-            null
-        }
+        // 1) Split into exactly two parts
+        val parts = locationStr.split(",")
+        if (parts.size != 2) return null
+
+        // 2) Try parsing each coordinate
+        val lat = parts[0].trim().toDoubleOrNull() ?: return null
+        val lng = parts[1].trim().toDoubleOrNull() ?: return null
+
+        // 3) Only if both succeed do we return a LatLng
+        return LatLng(lat, lng)
     }
 
     private fun calculateDistance(

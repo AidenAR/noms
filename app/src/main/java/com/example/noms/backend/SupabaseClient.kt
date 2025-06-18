@@ -14,8 +14,8 @@ import java.time.format.DateTimeFormatter
 
 val remoteConfig = Firebase.remoteConfig
 val supabase = createSupabaseClient(
-    supabaseUrl = "https://xoffilinikbhnlvdfaib.supabase.co",
-    supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhvZmZpbGluaWtiaG5sdmRmYWliIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjc0OTYxMzEsImV4cCI6MjA0MzA3MjEzMX0.2x8XkQS3ahCmYJJHSn6581ki2wh4-mbcWzBEUEmGtu0"
+    supabaseUrl = "https://azcitwvpekxewfbmrepj.supabase.co",
+    supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF6Y2l0d3ZwZWt4ZXdmYm1yZXBqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk0ODAyNzEsImV4cCI6MjA2NTA1NjI3MX0.F3HZaIKmdY3RPu7fh3GKUo9e4XwyP8_VcJwia3V9FpI"
 ) {
     install(Postgrest)
     install(Storage)

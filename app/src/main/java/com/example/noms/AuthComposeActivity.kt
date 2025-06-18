@@ -51,7 +51,7 @@ import com.example.noms.backend.setCurrentUser
 
 class AuthComposeActivity : ComponentActivity() {
     private lateinit var auth: FirebaseAuth
-    private val bypassAuth = false // TODO: SET THIS TO TRUE, TO SKIP AUTH FOR TESTING
+    private val bypassAuth = true // TODO: SET THIS TO TRUE, TO SKIP AUTH FOR TESTING
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

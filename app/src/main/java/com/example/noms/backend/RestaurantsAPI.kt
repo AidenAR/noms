@@ -165,15 +165,28 @@ suspend fun getPlaceDetails(context: Context, placeId: String): com.google.andro
     }
 }
 
-// get the location of a place
 fun parseLocationString(locationStr: String): LatLng? {
-    return try {
-        val (lat, lng) = locationStr.split(",").map { it.trim().toDouble() }
-        LatLng(lat, lng)
-    } catch (e: Exception) {
-        null
-    }
-}
+    // 1) Split on comma
+    val parts = locationStr.split(",")
+    if (parts.size != 2) return null
+
+    // 2) Try parsing each part to Double
+    val lat = parts[0].trim().toDoubleOrNull() ?: return null
+    val lng = parts[1].trim().toDoubleOrNull() ?: return null
+
+    // 3) Only if both succeed do we return a LatLng
+    return LatLng(lat, lng)
+}//fun parseLocationString(locationStr: String): LatLng? {
+//    return try {
+//        val (lat, lng) = locationStr.split(",").map { it.trim().toDouble() }
+//        LatLng(lat, lng)
+//    } catch (e: Exception) {
+//        null
+//    }
+//}
+
+
+// get the location of a place
 
 // check if a location is visible on the map
 fun isLocationVisible(location: String, visibleRegion: LatLngBounds): Boolean {

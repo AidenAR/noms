@@ -45,10 +45,10 @@ class MainActivity : ComponentActivity() {
                             .build()
                         remoteConfig.setConfigSettingsAsync(configSettings)
                         remoteConfig.setDefaultsAsync(mapOf(
-                            "supabase_url" to "",
-                            "supabase_key" to "",
-                            "places_api_key" to "",
-                            "google_maps_key" to "",
+                            "supabase_url" to "https://azcitwvpekxewfbmrepj.supabase.co",
+                            "supabase_key" to "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF6Y2l0d3ZwZWt4ZXdmYm1yZXBqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk0ODAyNzEsImV4cCI6MjA2NTA1NjI3MX0.F3HZaIKmdY3RPu7fh3GKUo9e4XwyP8_VcJwia3V9FpI",
+                            "places_api_key" to "AIzaSyBeXBdAkyXHFGhX8p-SVQzNRz8YRrYb7Jg",
+                            "google_maps_key" to "AIzaSyBeXBdAkyXHFGhX8p-SVQzNRz8YRrYb7Jg",
                         ))
 
                         remoteConfig.fetchAndActivate().addOnCompleteListener { task ->
@@ -59,7 +59,8 @@ class MainActivity : ComponentActivity() {
                                 Log.d("RemoteConfig", "Places API Key: ${remoteConfig.getString("places_api_key")}")
                                 Log.d("RemoteConfig", "Google Maps Key: ${remoteConfig.getString("google_maps_key")}")
 
-                                val mapsApiKey = "MAPS_API_KEY"
+                                val mapsApiKey = "AIzaSyBeXBdAkyXHFGhX8p-SVQzNRz8YRrYb7Jg"
+//                                remoteConfig.getString("places_api_key")
                                 if (mapsApiKey.isNotEmpty()) {
                                     Places.initialize(applicationContext, mapsApiKey)
                                     Log.d("PlacesAPI", "Places API initialized successfully with Remote Config key")
@@ -67,8 +68,11 @@ class MainActivity : ComponentActivity() {
                                     Log.e("Maps", "No API key available from Remote Config")
                                 }
 
-                                val supabaseUrl = "SUPABASE_URL"
-                                val supabaseKey = "SUPABASE_KEY"
+//                                remoteConfig.getString("supabase_url")
+//                                remoteConfig.getString("supabase_key")
+
+                                val supabaseUrl = "https://azcitwvpekxewfbmrepj.supabase.co"
+                                val supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF6Y2l0d3ZwZWt4ZXdmYm1yZXBqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk0ODAyNzEsImV4cCI6MjA2NTA1NjI3MX0.F3HZaIKmdY3RPu7fh3GKUo9e4XwyP8_VcJwia3V9FpI"
                                 if (supabaseUrl.isNotEmpty() && supabaseKey.isNotEmpty()) {
                                     val supabase = createSupabaseClient(
                                         supabaseUrl = supabaseUrl,
