@@ -1,0 +1,19 @@
+The most exciting thing I've ever built isn't just an app - it's a bridge between cultures, strangers, and the stories we tell over shared meals. "Noms" started from a deeply personal frustration that I think every co-op student can relate to landing in a new city, hungry and alone, scrolling through endless fake reviews on Google, wondering where the locals actually eat. This was literally me when I first came to Canada back in 2021, those reddit Lazeez reviews were so off, my Trini stomach barely survived. 
+I remember my first week on my 4th co-op , standing outside a sketchy-looking taco truck at 2 AM, debating whether to trust a single google review or go to a 24 hour Mcdonalds or starve. That moment crystallized everything wrong with how we discovered food the platforms felt sterile, transactional, devoid of the human connection that makes dining special.
+
+That's when I decided to build something different. Noms became my answer to bridging cultural barriers through cuisine, creating genuine connections in a world of fake reviews. What started as solving my own problem evolved into a platform where fellow co-op students could find authentic local gems and connect with other foodies.
+
+The technical challenges were immense, wrestling with real-time location services, debugging map integrations, and crafting my favorite feature: “Cultural Immersion Mode,” which provides stories behind dishes and chef spotlights. This wasn't just about restaurants; it was about preserving cultural narratives.
+
+What I'm most proud of isn't the clean UI or the complex backend architecture, it's watching the vision come to life. Every feature in Noms reflects something I believe deeply: that technology should enhance human connection, not replace it. The curated playlists feature came from my own habit of mentally cataloging “date night spots” and “comfort food havens.”  The genuine review system emerged from my frustration with getting free food for fake reviews (yes, that happened cough cough  Shawarma Plus).
+
+Here's the beautiful irony, while building an app about connecting strangers over food, I found my own community. I teamed up with three people I'd never met before - complete strangers thrown together by circumstance and a shared vision. What started as awkward introductions in our first project meeting evolved into something magical. We'd spend hours debugging together, arguing over UI choices, and celebrating small victories with late-night Campus pizza runs (very on-brand for a food app team).
+
+Eight months later, we still message each other every single day in the same group chat, we made for Noms. These aren't just former teammates, they've become some of my closest friends. We share memes, celebrate each other's wins, and yes, still send restaurant recommendations. It's proof that Noms worked exactly as intended, just not how I expected: it brought together four strangers who discovered they were meant to be friends.
+
+Building Noms taught me that the most meaningful projects solve problems you've personally lived, but they also create the connections you didn't know you needed. Every breakthrough wasn't just moving us closer to our technical goals, it was strengthening bonds between four people who started as strangers and became a family.
+
+Noms reflects who I am as a builder: someone who believes the best solutions emerge from authentic collaboration and shared purpose. I don't just write code, I build relationships that outlast the projects themselves. Noms isn't just about finding good food; it's about finding your people, one meal and one meaningful connection at a time.
+
+
+https://github.com/AidenAR/noms
